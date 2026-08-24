@@ -22,9 +22,13 @@ provider "openstack" {
 ############################
 
 locals {
-  app_name           = "my-app"
-  flavor             = "gp1.small"
-  enable_floating_ip = true
+  app_name = "my-app"
+  flavor   = "gp1.small"
+
+  # Adressen in DHBWv4 sind oeffentlich geroutet, die feste Adresse der Instanz
+  # ist also fuer sich erreichbar. Ein Floating IP schlaegt dort fehl, weil das
+  # Subnetz keinen Router zum externen Netz hat.
+  enable_floating_ip = false
 }
 
 # Packer-Image aus Glance laden
