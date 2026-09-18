@@ -840,8 +840,12 @@ Zu jedem Release **muss** eine umfassende Beschreibung erstellt werden (siehe un
 
 ### App registrieren
 
-Bei **privaten Repositories** muss zunächst der Collaborator `six7clickndeploy` hinzugefügt werden, damit der AppStore Zugriff hat:
-**Settings → Collaborators → Add people → `six7clickndeploy`**
+Bei **privaten Repositories** muss die GitHub App der jeweiligen AppStore-Installation auf dem
+Repository installiert werden, damit der AppStore lesen kann. Den Installationslink zeigt der
+Wizard beim Hinzufügen der App an; er führt zu **Install → Only select repositories**.
+
+Die App bekommt ausschließlich Leserecht auf die Inhalte der Repositories, die man dort auswählt.
+Den Zugriff entzieht man jederzeit unter **Settings → Applications → Installed GitHub Apps**.
 
 Bei öffentlichen Repositories ist dieser Schritt nicht notwendig.
 
